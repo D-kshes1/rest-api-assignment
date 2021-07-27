@@ -22,4 +22,39 @@ api has following files listed with their working:
                     2.a>model-Category.js : which holds schema for category table
                     2.b>model-Product.js  : which holds schema for product table
 
-3>routes(folder): Tjis folder contains a js file which holds all the CRUD routed needed to perform desired operations                            
+3>routes(folder): Tjis folder contains a js file which holds all the CRUD routed needed to perform desired operations
+
+
+To perfrom crud operation follow these steps:
+1> CREATE:
+   Open postman and select "POST" http method.
+   Select body and then raw and file to be in json format
+   Enter the details required as per mentioned in model-category schema file.
+   Press the send button
+**to confirm if the entered data is got posted in mongodb run "GET" http method with "http://localhost:8000/readAll" URL which will fetch all records from product table
+  
+2> READ
+   (One product)
+         Open postman and select "GET" http method.
+         url should be "http://localhost:8000/read/productId"
+         **productId here is the id of product which you want to fetch from database
+
+   (all products)
+         Open postman and select "GET" http method.
+         url should be "http://localhost:8000/readAll"
+
+3> UPDATE:
+   Open postman and select "PATCH" http method.
+   url should be "http://localhost:8000/update/productId"
+   Select body and then raw and file to be in json format
+   add all the fields you want to change
+   click on send
+   your record will get updated and to confirm you can fetch that record from database
+   
+4> DELETE:
+   Open postman and select "DELETE" http method.
+   url should be "http://localhost:8000/delete/productId"
+   the product with mentioned productId will get removed from the product table
+
+
+   

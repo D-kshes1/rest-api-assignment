@@ -1,0 +1,25 @@
+The following REST-api is all about performing CRUD operation on tables which are: 
+1>Product
+2>Category
+
+To get started/setup this project in your system, follow the following steps:
+1>download the repository from github
+2>you should have LTS version of node in your system
+3>open project in your editor(preferred one is VS-code)and open terminal
+4>run npm install command in the terminal to install all dependecies from package.json
+5>then clear console and run command "npm run dev"
+6>open the localhost on browser/postman to perform CRUD operations 
+
+
+
+
+api has following files listed with their working:
+1>server.js     : In this file we are making connection to our database where our tables will be stored.
+                  The database used here is NOSQL MONGO
+                  Here we are also dealing with middlewares for our routes
+
+2>model(folder) : This folder contains the desired schema required for our database. It contains 2js files:
+                    2.a>model-Category.js : which holds schema for category table
+                    2.b>model-Product.js  : which holds schema for product table
+
+3>routes(folder): Tjis folder contains a js file which holds all the CRUD routed needed to perform desired operations                            
